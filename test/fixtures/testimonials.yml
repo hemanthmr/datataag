@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  phone: 
+  business_name: MyText
+  testimonial_text: MyText
+  publish_testimonial: false
+
+two:
+  name: MyString
+  email: MyString
+  phone: 
+  business_name: MyText
+  testimonial_text: MyText
+  publish_testimonial: false

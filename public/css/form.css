@@ -1,0 +1,54 @@
+
+/* ===========================
+   ====== Contact Form ======= 
+   =========================== */
+
+input, textarea {
+	width: 365px;
+	height:24px;
+	padding: 4px;
+	color: #999999;
+	/*box-shadow: rgba(34, 177, 76, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(34, 177, 76, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(34, 177, 76, 0.1) 0px 0px 8px; */
+	float:right;
+	background:#000000;
+	border:0;
+}
+
+textarea {
+	height: 150px;
+	max-width: 365px;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid #333;
+	box-shadow: rgba(34, 177, 76, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(34, 177, 76, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(34, 177, 76, 0.2) 0px 0px 8px;	
+}
+
+.form label {
+	color: #999999;
+	line-height:24px;
+}
+.form p {
+	clear:both;
+}
+/* ===========================
+   ====== Submit Button ====== 
+   =========================== */
+
+.submit input {
+	width: 100px; 
+	height: 30px;
+	background:url(../images/submit_btn_bg.jpg) repeat-x top left;
+	color: #FFF;
+	text-transform:uppercase;
+	font: bold 14px Arial, Helvetica, sans-serif;
+	float:left;
+	margin:10px 0 0 97px;
+	border:0;
+	
+}

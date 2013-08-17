@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Data Taag Technologies</title>
+
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<link rel="stylesheet" href="css/boilerPlate.css" type="text/css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/header_slider.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js"></script>
+
+<script type="text/javascript">
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+
+<link rel="stylesheet" href="css/slide.css" media="screen" />
+<style type="text/css" media="screen">
+ul { margin: 0; padding: 0; list-style: none; }		
+a.disabled { opacity: .4; }
+</style>
+
+<script src="js/jquery.colorbox.js"></script>
+<link rel="stylesheet" href="css/popup_form.css" />
+<link rel="stylesheet" href="css/form.css" />
+
+	<script>
+			$(document).ready(function(){
+				$(".inline").colorbox({inline:true});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+			});
+	</script>
+    
+</head>
+
+
+<body>
+<div id="topNav"> 
+	 <div id="logo"><a href="index.html"><img src="images/logo_data.png" alt="dataTAAG Technologies" border="0" /></a></div> 
+<h1>Admin</h1><a href="/admins/sign_out" data-method="delete" rel="nofollow">Logout</a>
+</div> <!-- Top Nav End -->
+
+<div id="bodySec">
+	
+	<div >
+		<h1>Testimonials</h1>
+		<table border="1" width="100%">
+			<thead>
+<th>Name</th>
+<th>Business</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Testimonial</th>
+<th>View</th>
+<th>Actions</th>
+</thead>
+
+		<tbody>
+       <% @testimonials.each do |obj| %>
+<tr>
+<td><%= obj.name %></td>
+<td><%= obj.business_name %></td>
+<td><%= obj.email %></td>
+<td><%= obj.phone %></td>
+<td><%= obj.testimonial_text %></td>
+<td><%= obj.publish_testimonial ? "Published" : "Yet to be verified"  %></td>
+<td>
+<a href="/testimonials/<%=obj.id%>">show</a>&nbsp;&nbsp;
+<%=link_to "Delete",testimonial_path(obj.id), :method => :delete, :class => "delete", :confirm => "Are you sure ?"%>  
+</td>
+</tr>
+<%end%>
+
+</tbody>
+		</table>
+     </div>
+<br/><br/>
+
+     <div >
+		<h1>Downloads</h1>
+		<table border="1" width="100%">
+			<thead>
+<th>Name</th>
+<th>Business</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Comment</th>
+<th>Actions</th>
+</thead>
+
+		<tbody>
+       <% @downloads.each do |obj| %>
+<tr>
+<td><%= obj.name %></td>
+<td><%= obj.business_name %></td>
+<td><%= obj.email %></td>
+<td><%= obj.phone %></td>
+<td><%= obj.comment %></td>
+<td>
+<a href="/downloads/<%=obj.id%>">show</a>&nbsp;&nbsp;
+<%=link_to "Delete",download_path(obj.id), :method => :delete, :class => "delete", :confirm => "Are you sure ?"%>  
+</td>
+</tr>
+<%end%>
+
+</tbody>
+		</table>
+     </div>
+
+
+     <br/><br/>
+
+</div>
+<div class="copy-rights"> &copy;2013 dataTAAG Technologies Middle East L.L.C. All rights reserved</div>
+</body>

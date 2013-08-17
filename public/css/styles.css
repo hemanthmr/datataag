@@ -1,0 +1,453 @@
+body {
+    margin: 0;
+	padding:0;
+	background:#000;
+	font-size:12px;
+	color:#aeadad;
+}
+h1{
+	font-size:14px;
+	color:#0080ff;
+	background:url(../images/h1_bg.png) no-repeat left bottom;
+	padding: 0 0 5px 10px;
+	}
+ul{
+	width:auto;
+	}
+li{
+	list-style-position:inside;
+	background:url(../images/bulletBlue.gif) no-repeat left 5px;
+	padding-left:15px;
+	margin-bottom:8px;
+	}
+li ul{
+	margin:15px 0;
+	}	
+li ul li{
+	list-style-position:inside;
+	background:url(../images/bulletGrey.gif) no-repeat left 5px;
+	padding-left:15px;
+	margin-bottom:5px;
+	}
+.body-container ul{
+	margin-left:20px;
+	}
+#topNav{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top:20px;
+	min-height:100px;
+	}
+#logo{
+	width:327px;
+	height:100px;
+	float:left;
+	}
+#topNavRight{
+	float:right;
+	width:673px;
+	}
+#headerSec{
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	}
+#bodySec{
+	width:1000px;
+	margin:0 auto;
+	padding: 20px 0 0 0;
+	overflow:hidden;
+	}
+.welcome_cont{
+	width:580px;
+	float:left;
+	background:url(../images/midLine_welcome.png) no-repeat right 50%;
+	padding-right:30px;
+	}
+.video_home{
+	width:365px;
+	height:246px;
+	margin-left:20px;
+	float:right;
+	border:1px solid #1f1f1f;
+	}
+#caseStudySec{
+	width:1000px;
+	overflow:hidden;
+	}
+#caseStudyMain{
+	width:310px;
+	float:left;
+	background:url(../images/midLine_welcome.png) no-repeat right 50%;
+	padding-right:12px;
+	}
+	
+/* = = = = = =  Social Icons Styles (Top) = = = = = =  */
+.social { list-style:none; margin:0 ; width:232px; float:right; padding-top:8px; }
+.social li { display:inline; float:left; background-repeat:no-repeat; padding:0; }
+.social li a { display:block; width:53px; height:38px; position:relative; text-decoration:none; line-height:12px; }
+.social li a strong { font-weight:normal; position:absolute; left:0px; top:-1px; color:#0080ff; padding:0px; }
+
+li.gallery { background-image:url("../images/gallery_icon.png"); padding-right:5px; }
+li.download { background-image:url("../images/download_icon.png"); padding-right:5px; }
+li.linkedin { background-image:url("../images/linkedin_icon.png"); padding-right:5px; }
+li.facebook { background-image:url("../images/facebook_icon.png"); }
+	
+/* = = = = = =  Menu Navigation Styles = = = = = =  */
+.ddsmoothmenu{
+font: normal 14px arial;
+width: auto;
+margin-top:10px;
+float:right;
+}
+.ddsmoothmenu ul{
+z-index:100;
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+/*Top level list items*/
+.ddsmoothmenu ul li{
+position: relative;
+display: inline;
+float: left;
+background:none;
+padding:0;
+}
+/*Top level menu link items style*/
+.ddsmoothmenu ul li a{
+display: block;
+padding: 9px;
+text-decoration: none;
+}
+
+* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
+color: #0080ff;
+}
+
+.ddsmoothmenu ul li a.selected { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+color: #22b14c;
+border-top:1px solid #22b14c;
+padding: 8px 9px 9px 9px;
+
+}
+
+.ddsmoothmenu ul li a:hover{
+background: black; /*background of menu items during onmouseover (hover state)*/
+color: #22b14c;
+border-top:1px solid #22b14c;
+padding: 8px 9px 9px 9px;
+}
+	
+/* sub menus */
+.ddsmoothmenu ul li ul{
+position: absolute;
+left: -3000px;
+display: none; /*collapse all sub menus to begin with*/
+visibility: hidden;
+background:#111314;
+}
+
+/*Sub level menu list items (alters style from Top level List Items)*/
+.ddsmoothmenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.ddsmoothmenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.ddsmoothmenu ul li ul li a{
+font: normal 12px arial;
+width: auto; /*width of sub menus*/
+padding: 8px 10px!important;
+margin: 0;
+border:0 !important;
+color:#a2a2a2 !important;
+}
+
+.ddsmoothmenu ul li ul li a:hover{
+color:#22b14c !important;
+}
+
+/* Holly Hack for IE \*/
+
+/* ######### CSS classes applied to down and right arrow images  ######### 
+
+.downarrowclass{
+position: absolute;
+top: 12px;
+right: 7px;
+}*/
+
+.rightarrowclass{
+position: absolute;
+top: 11px;
+right: 5px;
+}
+
+/* ######### CSS for shadow added to sub menus  ######### */
+
+.ddshadow{ 
+position: absolute;
+left: 0;
+top: 0;
+width: 0;
+height: 0;
+background-color: none; /* generally should be just a little lighter than the box-shadow color for CSS3 capable browsers */
+}
+
+/* = = = = = =  Footer Styles = = = = = =  */
+#footerSec{
+	background:#060606 url(../images/footer_bg.jpg) repeat-x top left;
+	padding: 10px 0;
+	margin:50px auto 0 auto;
+	overflow:hidden;
+	}
+.footer-cont{
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.footer-cont ul{
+	width:auto;	
+	float:left;
+	margin-right:10px;
+	}
+.footer-cont ul span{ color:#006ded; margin-left:10px;}
+.footer-cont ul li{
+	width:auto;
+	list-style:none;
+	margin:2px 0;
+	padding: 0 0 0 10px;
+	background:url(../images/bullet.gif) no-repeat left top;
+	}
+.footer-cont ul li a{
+	width:auto;
+	margin:0;
+	color:#676767;
+	text-decoration:none;
+	}
+.footer-cont ul li a:hover{
+	color:#676767;
+	text-decoration:underline;
+}
+.copy-rights{
+	width:1000px;
+	margin:0 auto;
+	font-size:11px;
+	padding: 10px 0;
+	text-align:right;
+	}
+	
+/* = = = = =  = Inner Pages = = = = = */
+.bedgrum{
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+	margin-top:10px;
+	}
+.bedgrum ul{
+	width:auto;
+	}
+.bedgrum ul li{
+	width:auto;
+	margin-right:5px;
+	float:left;
+	color:#22b14c;
+	list-style:none;
+	background:none;
+	padding:0;
+	}
+.bedgrum ul li a{
+	width:auto;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color:#a2a2a2;
+	text-decoration:none;
+	}
+	
+#rightNav {
+	width:260px;
+	margin-left:20px;
+	background:#060606;
+	overflow:hidden;
+	float:left;
+	padding:10px;
+	}
+.body-container, .body-container-partners, .body-container-contact{
+	width:700px;
+	height:auto;
+	overflow:hidden;
+	float:left;
+	}
+.body-container-partners{
+	width:710px;
+		}
+.body-container-contact{
+	width:1000px;
+	}
+
+/* -- - - For Assistance Call  --- */
+.call-container{
+	width:260px;
+	margin-bottom:10px;
+	}
+.call-head{
+	width:260px;
+	background:url(../images/forAssistanceCall_icon.jpg);
+	padding: 0 0 0 10px;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color:#22b14c;
+	text-transform:uppercase;
+	line-height:30px;
+	}
+.call-content{
+	font: bold 16px Arial, Helvetica, sans-serif;
+	color:#0080ff;
+	padding:10px;
+	}
+	
+/* -- - - Quick Solutions  --- */
+.quick-sol-head{
+	width:260px;
+	background:url(../images/quickLinks_icon.jpg);
+	padding: 0 0 0 10px;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color:#22b14c;
+	text-transform:uppercase;
+	line-height:30px;
+	}
+.quick-sol-content{
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color:#0080ff;
+	padding:10px;
+	}
+.quick-sol-content ul{
+	width:auto;
+	}
+.quick-sol-content ul li{
+	list-style:none;
+	}
+.quick-sol-content ul li a{
+	font: normal 12px Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color:#0080ff;
+}
+.quick-sol-content ul li a:hover{
+	text-decoration:underline;
+}
+/* -- - - video Call  --- */
+.video-head{
+	width:260px;
+	background:url(../images/video_icon.jpg);
+	padding: 0 0 0 10px;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	color:#22b14c;
+	text-transform:uppercase;
+	line-height:30px;
+	}
+.video-content{
+	width:258px;
+	border:1px solid #1a1a1a;
+	margin-top:10px;
+	}
+
+/* -- - - Partners  --- */
+.partners_logos, .partners_logos1{
+	width:230px;
+	height:150px;
+	float:left;
+	margin-bottom:10px;
+	}
+.partners_logos1{
+	margin: 0 10px 10px 10px;
+	}
+	
+/* -- - - Contact Us --- */	
+.contact-cont-left, .contact-cont-right{
+	width:470px;
+	height:450px;
+	float:left;
+	background:#060606;
+	margin-top:10px;
+	padding:10px;
+	overflow:hidden;
+	}
+.contact-cont-right{
+	float:right;
+	}
+.contact-head{
+	background:url(../images/cont_head_bg.jpg) repeat-x left top;
+	padding:10px;
+	color:#22b14c;
+	margin-bottom:10px;
+	 text-transform:uppercase;
+	}
+.google-map{
+	width:470px;
+	height:250px;
+	background:url(../images/map_shadow.jpg) no-repeat left bottom;
+	padding-bottom:21px;
+	overflow:hidden;
+	margin-top:10px;
+	}
+h3.contact-address-head{
+	text-transform:uppercase;
+	color:#0080ff;
+	font-size:14px;
+	margin:0 0 5px 0 ;
+	}
+.contact-address{
+	font-size:12px;
+	color:#aeadad;
+padding-top:20px;
+
+	}
+.contact-address-green{
+	color:#22b14c;
+	font-weight:bold;
+	}
+.f12_green{
+	color:#fff;
+	font-weight:bold;
+	font-size:13px;
+	}
+.f12_blue{
+	color:#fff;
+	font-weight:bold;
+	}
+.f14_grey {
+	color:#aeadad;
+	font-size:14px;
+	font-weight:bold;}
+.library_grid{
+	background:url(../images/lib_gridBg.jpg) repeat-x top left;
+	padding:3px 10px 0 10px ;
+	margin-top:10px;
+	overflow:hidden;
+	}
+.library_grid .copy{
+	float:left;
+	color:#aeadad;
+	padding:10px 0 0 0;
+}
+.library_grid span{
+	float:right;
+	color:#e50000;
+	background:url(../images/pdf_icon.png) no-repeat right top;
+	padding:10px 30px 5px 0;
+	text-transform:uppercase;
+}
+.library_grid span a{
+		color:#e50000;
+		text-decoration:none;}
+.library_grid span a:hover {
+	text-decoration:underline;
+}

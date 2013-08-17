@@ -1,0 +1,36 @@
+ <%= form_for(@testimonial) do |f|%>
+		</p>
+			<p class="name">
+        	<label for="name">Name</label>
+        	<%= f.text_field :name , :disabled => true%>
+		</p>
+	
+		<p class="email">
+        	<label for="email">Email</label>
+				<%= f.text_field :email , :disabled => true %>
+		<p class="web">
+        	<label for="phone">Phone</label>
+        	<%= f.text_field :phone , :disabled => true %>
+		</p>		
+		
+        <p class="web">
+        	<label for="business">Business Name</label>
+        	<%= f.text_field :business_name , :disabled => true %>
+		</p>
+        
+		<p class="text">
+	        <label for="web">Testimonial</label>
+	        <%= f.text_area :testimonial_text , :disabled => true %>
+		</p>
+
+		<p class="text">
+	        <label for="web">Publish</label>
+	        <%= f.check_box :publish_testimonial %>
+		</p>
+		
+		
+		
+		<p class="submit">
+			<input type="submit" value="update" />
+		</p>
+	<%end%>

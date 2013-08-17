@@ -1,0 +1,115 @@
+*{
+	margin:0;
+	padding:0;
+	}
+body{
+	background:#000;
+	font: bold 12px arial;
+	}
+	
+.ddsmoothmenu{
+font: normal 12px arial;
+width: 100%;
+}
+
+.ddsmoothmenu ul{
+z-index:100;
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.ddsmoothmenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.ddsmoothmenu ul li a{
+display: block;
+padding: 10px 10px 10px 10px;
+text-decoration: none;
+}
+
+* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
+color: #0080ff;
+}
+
+.ddsmoothmenu ul li a.selected { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+background: black !important; 
+color: #22b14c;
+}
+
+.ddsmoothmenu ul li a:hover{
+background: black; /*background of menu items during onmouseover (hover state)*/
+color: #22b14c;
+border-top:1px solid #22b14c;
+padding: 9px 10px 10px 10px;
+}
+	
+/* sub menus */
+.ddsmoothmenu ul li ul{
+position: absolute;
+left: -3000px;
+display: none; /*collapse all sub menus to begin with*/
+visibility: hidden;
+background:#333;
+}
+
+/*Sub level menu list items (alters style from Top level List Items)*/
+.ddsmoothmenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.ddsmoothmenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.ddsmoothmenu ul li ul li a{
+font: normal 12px arial;
+width: auto; /*width of sub menus*/
+padding: 8px 10px!important;
+margin: 0;
+border:0 !important;
+color:#fff !important;
+}
+
+.ddsmoothmenu ul li ul li a:hover{
+color:#22b14c !important;
+}
+
+/* Holly Hack for IE \*/
+
+/* ######### CSS classes applied to down and right arrow images  ######### 
+
+.downarrowclass{
+position: absolute;
+top: 12px;
+right: 7px;
+}*/
+
+.rightarrowclass{
+position: absolute;
+top: 11px;
+right: 5px;
+}
+
+/* ######### CSS for shadow added to sub menus  ######### */
+
+.ddshadow{ 
+position: absolute;
+left: 0;
+top: 0;
+width: 0;
+height: 0;
+background-color: none; /* generally should be just a little lighter than the box-shadow color for CSS3 capable browsers */
+}
